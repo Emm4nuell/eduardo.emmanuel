@@ -1,7 +1,6 @@
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
-// import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,7 +14,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // css: {
-  //   postcss: "./postcss.config.js", // Certifique-se de que está apontando para o arquivo correto
-  // },
 });

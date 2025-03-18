@@ -1,4 +1,4 @@
-import { ContextType } from "@/type/IProviderType";
+import { ContextType } from "@/types/IProviderType";
 import React, { createContext } from "react";
 
 const ContextProvider = createContext<ContextType | undefined>(undefined);
@@ -14,9 +14,7 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   }
 
   return (
-    <ContextProvider.Provider
-      value={{ handlerLogin, handlerLogout, status: true }}
-    >
+    <ContextProvider.Provider value={{ handlerLogin, handlerLogout }}>
       {children}
     </ContextProvider.Provider>
   );

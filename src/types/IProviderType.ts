@@ -7,5 +7,4 @@ export interface ChildrenType {
 export interface ContextType {
   handlerLogin: () => void;
   handlerLogout: () => void;
-  status: true | false;
 }

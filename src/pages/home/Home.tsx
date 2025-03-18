@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="z-2 relative h-[90vh] bottom-0">
       <SwaperSlider />
-      <div className="grid absolute z-10 border-1 border-white/30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-md p-8 rounded-lg shadow-lg text-white w-160 h-60">
+      <div className="grid absolute z-10 border-1 border-white/30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-md bg- p-8 rounded-lg shadow-lg text-white w-160 h-60">
         <h1 className="text-[35px] font-extrabold text-center">
           EDUARDO EMMANUEL
         </h1>

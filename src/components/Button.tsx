@@ -1,5 +1,4 @@
 import { ButtonType } from "@/types/IButtonType";
-import React from "react";
 
 const Button = ({ value, icon }: ButtonType) => {
   return (

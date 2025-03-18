@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import SwaperSlider from "@/components/swaperslider";
-import React from "react";
 
 const Home = () => {
   return (

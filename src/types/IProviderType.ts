@@ -7,4 +7,6 @@ export interface ChildrenType {
 export interface ContextType {
   handlerLogin: () => void;
   handlerLogout: () => void;
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
 }

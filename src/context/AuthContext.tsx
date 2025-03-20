@@ -1,11 +1,13 @@
 import { ContextType } from "@/types/IProviderType";
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 const ContextProvider = createContext<ContextType | undefined>(undefined);
 
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   function handlerLogin() {
     console.log("Login");
   }
@@ -14,7 +16,9 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   }
 
   return (
-    <ContextProvider.Provider value={{ handlerLogin, handlerLogout }}>
+    <ContextProvider.Provider
+      value={{ handlerLogin, handlerLogout, isOpen, setIsOpen }}
+    >
       {children}
     </ContextProvider.Provider>
   );

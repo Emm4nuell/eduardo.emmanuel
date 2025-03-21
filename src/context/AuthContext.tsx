@@ -6,7 +6,7 @@ const ContextProvider = createContext<ContextType | undefined>(undefined);
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   function handlerLogin() {
     console.log("Login");

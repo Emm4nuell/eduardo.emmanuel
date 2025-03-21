@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface ButtonType {
+export type ButtonType = {
   value: string;
   icon?: ReactNode;
-}
+};

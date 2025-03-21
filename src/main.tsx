@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "./pages/home/Home.tsx";
+import SobreMin from "./pages/SobreMin/SobreMin.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/home", element: <Home /> },
+      { path: "/sobre-min", element: <SobreMin /> },
       { path: "*", element: <Navigate to={"/home"} replace /> },
       { index: true, element: <Navigate to={"/home"} replace /> },
     ],

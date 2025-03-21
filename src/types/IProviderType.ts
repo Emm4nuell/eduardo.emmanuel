@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-export interface ChildrenType {
+export type ChildrenType = {
   children: ReactNode;
-}
+};
 
-export interface ContextType {
+export type ContextType = {
   handlerLogin: () => void;
   handlerLogout: () => void;
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
-}
+};

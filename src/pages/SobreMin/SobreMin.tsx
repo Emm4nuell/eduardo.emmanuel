@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import { FaAddressCard, FaUserGraduate } from "react-icons/fa";
+import fotoperfil from "@/assets/fotoperfil.jpeg";
 
 export default function SobreMin() {
   return (
@@ -7,7 +8,7 @@ export default function SobreMin() {
       <div className="flex flex-col items-center">
         <div className="w-26 h-26 bg-orange-500 border-2 border-orange-500 rounded-full flex items-center justify-center text-2xl font-bold overflow-hidden">
           <img
-            src="/public/fotoperfil.jpeg"
+            src={fotoperfil}
             alt="Foto"
             className="w-26 h-26 rounded-[50px] scale-[1.2] border-2 border-orange-500"
           />
@@ -16,7 +17,7 @@ export default function SobreMin() {
         <p className="text-orange-500">Desenvolvedor Full Stack</p>
       </div>
 
-      {/* <Card
+      <Card
         icons={
           <FaAddressCard className="bg-[#404040] w-9 h-9 p-[6px] text-[#FE9A00] rounded-[6px]" />
         }
@@ -27,7 +28,7 @@ export default function SobreMin() {
           de programação. Experiência na criação de APIs RESTful e sistemas
           escaláveis, com foco em desempenho e experiência do usuário.
         </strong>
-      </Card> */}
+      </Card>
 
       <Card
         icons={

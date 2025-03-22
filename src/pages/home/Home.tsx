@@ -8,6 +8,9 @@ const Home = () => {
       <div className="grid absolute w-[90%] sm:w-[640px] z-1 border-1 border-white/30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-md bg- p-8 rounded-lg shadow-lg text-white">
         <h1 className="text-[35px] font-extrabold text-center">
           EDUARDO EMMANUEL
+          <p className="text-orange-500 text-[20px]">
+            Desenvolvedor Full Stack
+          </p>
         </h1>
         <p className="text-sm leading-relaxed mt-5 mb-5">
           Desenvolvedor Full Stack apaixonado por tecnologia e boas práticas de

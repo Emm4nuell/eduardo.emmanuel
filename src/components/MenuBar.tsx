@@ -24,7 +24,7 @@ const MenuBar = ({ className, handlerOpen }: PropsType) => {
             onClick={handlerOpen}
             className=" hover:border-b-2 hover:border-orange-500"
           >
-            Sobre min
+            Sobre mim
           </Link>
         </li>
         <li className="transition-transform duration-300 hover:scale-110">
@@ -38,7 +38,7 @@ const MenuBar = ({ className, handlerOpen }: PropsType) => {
         </li>
         <li className="transition-transform duration-300 hover:scale-110">
           <Link
-            to={"#"}
+            to={"/contato"}
             onClick={handlerOpen}
             className=" hover:border-b-2 hover:border-orange-500"
           >

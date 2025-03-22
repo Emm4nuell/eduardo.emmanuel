@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/home/Home.tsx";
 import SobreMin from "./pages/SobreMin/SobreMin.tsx";
+import Contato from "./pages/contato/Contato.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/home", element: <Home /> },
       { path: "/sobre-min", element: <SobreMin /> },
+      { path: "/contato", element: <Contato /> },
       { path: "*", element: <Navigate to={"/home"} replace /> },
       { index: true, element: <Navigate to={"/home"} replace /> },
     ],

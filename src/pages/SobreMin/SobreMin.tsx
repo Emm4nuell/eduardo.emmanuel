@@ -10,29 +10,29 @@ import fotoperfil from "@/assets/fotoperfil.jpeg";
 
 export default function SobreMin() {
   return (
-    <div className="flex flex-col items-center gap-6 p-6 md:p-16 bg-gray-900 text-white w-full min-h-[90vh]">
+    <div className="flex flex-col items-center gap-8 p-6 md:p-16 text-white w-full min-h-[90vh] bg-black">
       {/* Perfil */}
       <div className="flex flex-col items-center text-center">
-        <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-orange-500">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500 mb-4 transition-transform duration-500 hover:scale-110">
           <img
             src={fotoperfil}
             alt="Foto de Eduardo Emmanuel"
             className="w-full h-full object-cover"
           />
         </div>
-        <h2 className="text-2xl font-semibold mt-4">Eduardo Emmanuel</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Eduardo Emmanuel</h2>
         <p className="text-orange-400 text-lg">Desenvolvedor Full Stack</p>
       </div>
 
       {/* Cards */}
-      <section className="flex flex-col gap-6 w-full max-w-3xl">
+      <section className="flex flex-col gap-8 w-full max-w-4xl">
         <Card
           icons={
-            <FaUserAlt className="bg-[#404040] text-[#FE9A00] w-9 h-9 p-2 rounded-[10px]" />
+            <FaUserAlt className="bg-[#404040] text-[#FE9A00] w-10 h-10 p-2 rounded-[10px]" />
           }
           titulo="Sobre Mim"
         >
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-gray-300">
             Desenvolvedor Full Stack com experiência em{" "}
             <strong>Spring Boot</strong> e <strong>React</strong>, focado em
             arquitetura escalável, boas práticas e otimização de código.
@@ -47,11 +47,11 @@ export default function SobreMin() {
 
         <Card
           icons={
-            <FaGraduationCap className="bg-[#404040] text-[#FE9A00] w-9 h-9 p-2 rounded-[10px]" />
+            <FaGraduationCap className="bg-[#404040] text-[#FE9A00] w-10 h-10 p-2 rounded-[10px]" />
           }
           titulo="Formação Acadêmica"
         >
-          <ul className="list-none space-y-2 text-sm">
+          <ul className="list-none space-y-2 text-sm text-gray-300">
             <li>
               <strong>MBA (Em andamento): </strong> Full Stack Web Development -
               UNIESP (2024 - 2025)
@@ -69,17 +69,17 @@ export default function SobreMin() {
 
         <Card
           icons={
-            <FaBriefcase className="bg-[#404040] text-[#FE9A00] w-9 h-9 p-2 rounded-[10px]" />
+            <FaBriefcase className="bg-[#404040] text-[#FE9A00] w-10 h-10 p-2 rounded-[10px]" />
           }
           titulo="Experiência Profissional"
         >
-          <p className="text-sm">
+          <p className="text-sm text-gray-300">
             <strong>
               SampaioForce (Trabalho Voluntário) - Full Stack Developer (2024 -
               Presente)
             </strong>
           </p>
-          <ul className="list-disc list-inside text-sm mt-2 space-y-1">
+          <ul className="list-disc list-inside text-sm mt-2 space-y-1 text-gray-300">
             <li>
               Desenvolvimento de APIs RESTful com Spring Boot, JPA e MySQL.
             </li>
@@ -90,11 +90,11 @@ export default function SobreMin() {
 
         <Card
           icons={
-            <FaCertificate className="bg-[#404040] text-[#FE9A00] w-9 h-9 p-2 rounded-[10px]" />
+            <FaCertificate className="bg-[#404040] text-[#FE9A00] w-10 h-10 p-2 rounded-[10px]" />
           }
           titulo="Certificações"
         >
-          <ul className="list-disc list-inside text-sm space-y-1">
+          <ul className="list-disc list-inside text-sm space-y-1 text-gray-300">
             <li>Spring Boot Expert - Segurança com JWT e boas práticas.</li>
             <li>Microserviços e Mensageria - Spring Cloud e Docker.</li>
             <li>Criação de Serviços Web com Spring Boot.</li>
@@ -103,11 +103,11 @@ export default function SobreMin() {
 
         <Card
           icons={
-            <FaTools className="bg-[#404040] text-[#FE9A00] w-9 h-9 p-2 rounded-[10px]" />
+            <FaTools className="bg-[#404040] text-[#FE9A00] w-10 h-10 p-2 rounded-[10px]" />
           }
           titulo="Habilidades"
         >
-          <ul className="grid grid-cols-2 gap-2 text-sm">
+          <ul className="grid grid-cols-2 gap-4 text-sm text-gray-300">
             <li>Spring Boot & JPA</li>
             <li>Next.js & React</li>
             <li>Arquitetura Hexagonal</li>

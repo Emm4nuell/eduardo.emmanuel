@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Icons = () => {
   return (
@@ -16,13 +16,13 @@ const Icons = () => {
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
         <FaFacebook className="hover:text-blue-600 transition duration-300" />
       </a>
-      <a
+      {/* <a
         href="https://github.com/Emm4nuell"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaGithub className="hover:text-gray-500 transition duration-300" />
-      </a>
+      </a> */}
     </div>
   );
 };

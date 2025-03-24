@@ -1,5 +1,6 @@
 import CardContato from "@/components/CardContato";
 import Input from "@/components/Input";
+import TextArea from "@/components/TextArea";
 
 const Contato = () => {
   return (
@@ -25,10 +26,7 @@ const Contato = () => {
               <label htmlFor="mensagem" className="text-sm text-gray-300">
                 Mensagem
               </label>
-              <textarea
-                title="Sua mensagem"
-                className="p-3 mt-2 w-full h-32 bg-[#333333] text-white rounded-lg border-2 border-[#444444] focus:outline-none focus:border-orange-500"
-              />
+              <TextArea />
               <button
                 type="submit"
                 className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition duration-200"

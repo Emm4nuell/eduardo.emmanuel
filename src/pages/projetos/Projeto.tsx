@@ -1,23 +1,10 @@
+import CardProjetos from "@/components/CardProjetos";
 import api from "@/service/api";
+import { RepoGitPropsType } from "@/types/RepoGitTypes";
 import { useEffect, useState } from "react";
 
-type Repo = {
-  id: number;
-  name: string;
-  full_name: string;
-  html_url: string;
-  description: string;
-  language: string;
-  stargazers_count: number;
-  forks_count: number;
-  created_at: string;
-  updated_at: string;
-  open_issues_count: number;
-  private: boolean;
-};
-
 const Projeto = () => {
-  const [repos, setRepos] = useState<Repo[]>([]);
+  const [repos, setRepos] = useState<RepoGitPropsType[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -47,10 +34,7 @@ const Projeto = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {repos.length > 0 ? (
           repos.map((repo) => (
-            <div
-              key={repo.id}
-              className="p-6 border-2 border-gray-700 rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105 hover:border-orange-500"
-            >
+            <CardProjetos key={repo.id}>
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-col space-y-4">
                   <h2 className="text-2xl font-semibold text-white">
@@ -85,7 +69,7 @@ const Projeto = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </CardProjetos>
           ))
         ) : (
           <p className="text-center">Não há repositórios para exibir.</p>

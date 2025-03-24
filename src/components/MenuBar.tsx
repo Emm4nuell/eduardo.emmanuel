@@ -29,7 +29,7 @@ const MenuBar = ({ className, handlerOpen }: PropsType) => {
         </li>
         <li className="transition-transform duration-300 hover:scale-110">
           <Link
-            to={"#"}
+            to={"/projetos"}
             onClick={handlerOpen}
             className=" hover:border-b-2 hover:border-orange-500"
           >

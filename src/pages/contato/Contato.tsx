@@ -3,14 +3,19 @@ import Input from "@/components/Input";
 
 const Contato = () => {
   return (
-    <div className="flex flex-col items-center min-h-[90vh] w-full p-6 bg-[#1E1E1E]">
+    <div className="flex flex-col items-center min-h-[90vh] w-full p-6 bg-gray-900">
       <div className="flex flex-col font-extrabold md:flex-row text-4xl text-center gap-3 mt-10">
-        <strong className="text-white">Contato</strong>
-        <strong className="text-orange-500">Eduardo Emmanuel</strong>
+        <h1 className="text-white">Contato</h1>
+        <h1 className="text-orange-500">Eduardo Emmanuel</h1>
       </div>
+      <p className="text-center text-lg text-gray-300 mt-4 mb-22">
+        Fique à vontade para entrar em contato comigo! Seja para tirar dúvidas,
+        trocar ideias ou discutir sobre possíveis colaborações, estou disponível
+        para conversar e ajudar no que for preciso.
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-16 gap-10 w-full max-w-5xl mx-auto">
-        <div className="border-2 border-[#444444] rounded-lg p-6 bg-[#2A2A2A]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl mx-auto">
+        <div className="border-2 p-6 border-gray-700 rounded-lg bg-gray-800">
           <CardContato titulo="Entre em Contato">
             <form action="" className="grid gap-5">
               <Input labelfor="nome" label="Nome" type="text" />

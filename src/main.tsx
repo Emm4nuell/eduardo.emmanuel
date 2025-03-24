@@ -11,6 +11,7 @@ import {
 import Home from "./pages/home/Home.tsx";
 import SobreMin from "./pages/SobreMin/SobreMin.tsx";
 import Contato from "./pages/contato/Contato.tsx";
+import Projeto from "./pages/projetos/Projeto.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "/home", element: <Home /> },
       { path: "/sobre-min", element: <SobreMin /> },
       { path: "/contato", element: <Contato /> },
+      { path: "/projetos", element: <Projeto /> },
       { path: "*", element: <Navigate to={"/home"} replace /> },
       { index: true, element: <Navigate to={"/home"} replace /> },
     ],

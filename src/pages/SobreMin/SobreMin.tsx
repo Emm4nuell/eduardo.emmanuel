@@ -1,4 +1,6 @@
 import Card from "@/components/Card";
+import api from "@/service/api";
+import { useEffect, useState } from "react";
 import {
   FaUserAlt,
   FaGraduationCap,
@@ -6,25 +8,42 @@ import {
   FaCertificate,
   FaTools,
 } from "react-icons/fa";
-import fotoperfil from "@/assets/fotoperfil.jpeg";
+
+type AvatarPropsType = {
+  avatar?: string | null;
+};
 
 export default function SobreMin() {
+  const [fotoPerfil, setFotoPerfil] = useState<AvatarPropsType | null>(null);
+  useEffect(() => {
+    async function getAvatar() {
+      try {
+        const request = await api.get("/Emm4nuell");
+        setFotoPerfil({ avatar: request.data.avatar_url });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getAvatar();
+  }, []);
   return (
-    <div className="flex flex-col items-center gap-8 p-6 md:p-16 text-white w-full min-h-[90vh] bg-black">
-      {/* Perfil */}
+    <div className="flex flex-col items-center gap-8 p-6 md:p-16 text-white w-full min-h-[90vh] bg-gray-900">
       <div className="flex flex-col items-center text-center">
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500 mb-4 transition-transform duration-500 hover:scale-110">
-          <img
-            src={fotoperfil}
-            alt="Foto de Eduardo Emmanuel"
-            className="w-full h-full object-cover"
-          />
+          {fotoPerfil?.avatar ? (
+            <img
+              src={fotoPerfil.avatar}
+              alt="Foto de Eduardo Emmanuel"
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <h1>teste de sistema</h1>
+          )}
         </div>
-        <h2 className="text-3xl font-bold text-white mb-2">Eduardo Emmanuel</h2>
+        <h2 className="text-4xl font-bold text-white mb-2">Eduardo Emmanuel</h2>
         <p className="text-orange-400 text-lg">Desenvolvedor Full Stack</p>
       </div>
 
-      {/* Cards */}
       <section className="flex flex-col gap-8 w-full max-w-4xl">
         <Card
           icons={

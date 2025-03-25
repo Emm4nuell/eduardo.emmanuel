@@ -1,14 +1,25 @@
+import Animate from "@/components/Animate";
 import CardContato from "@/components/CardContato";
 import Input from "@/components/Input";
 import TextArea from "@/components/TextArea";
+import { useEffect, useState } from "react";
 
 const Contato = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(true);
+    }, 10); // 5 segundos de delay
+  }, []);
+
   return (
     <div className="flex flex-col items-center min-h-[90vh] w-full p-6 bg-gray-900">
-      <div className="flex flex-col font-extrabold md:flex-row text-4xl text-center gap-3 mt-10">
+      <Animate times={0}>
         <h1 className="text-white">Contato</h1>
         <h1 className="text-orange-500">Eduardo Emmanuel</h1>
-      </div>
+      </Animate>
+
       <p className="text-center text-lg text-gray-300 mt-4 mb-22">
         Fique à vontade para entrar em contato comigo! Seja para tirar dúvidas,
         trocar ideias ou discutir sobre possíveis colaborações, estou disponível

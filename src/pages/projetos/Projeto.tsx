@@ -1,3 +1,4 @@
+import Animate from "@/components/Animate";
 import CardProjetos from "@/components/CardProjetos";
 import api from "@/service/api";
 import { RepoGitPropsType } from "@/types/RepoGitTypes";
@@ -22,9 +23,12 @@ const Projeto = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 p-6 md:p-16 text-white">
-      <h1 className="text-4xl font-bold text-center mb-4 text-orange-500">
-        Meus Repositórios do GitHub
-      </h1>
+      <Animate>
+        <h1 className="text-4xl font-bold text-center mb-4 text-orange-500">
+          Meus Repositórios do GitHub
+        </h1>
+      </Animate>
+
       <p className="text-center text-lg text-gray-300 mb-22">
         Aqui você pode visualizar todos os repositórios públicos que desenvolvi
         ou colaboro no GitHub. Cada card exibe detalhes sobre o repositório,

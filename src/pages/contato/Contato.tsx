@@ -2,17 +2,8 @@ import Animate from "@/components/Animate";
 import CardContato from "@/components/CardContato";
 import Input from "@/components/Input";
 import TextArea from "@/components/TextArea";
-import { useEffect, useState } from "react";
 
 const Contato = () => {
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 10); // 5 segundos de delay
-  }, []);
-
   return (
     <div className="flex flex-col items-center min-h-[90vh] w-full p-6 bg-gray-900">
       <Animate times={0}>

@@ -24,9 +24,9 @@ const Header = () => {
           <Icons />
         </div>
       </div>
-      <div className="absolute right-15 flex md:hidden justify-center items-center rounded-4xl mt-20 w-10 h-10 bg-orange-500">
+      {/* <div className="absolute z-11 right-15 flex md:hidden justify-center items-center rounded-4xl mt-20 w-10 h-10 bg-orange-500">
         <FaDownload />
-      </div>
+      </div> */}
     </div>
   );
 };

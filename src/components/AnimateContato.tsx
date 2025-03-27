@@ -1,7 +1,7 @@
 import { AnimatePropsType } from "@/types/AnimateType";
 import { useEffect, useState } from "react";
 
-const Animate = ({ times, children }: AnimatePropsType) => {
+const AnimateContato = ({ times, children }: AnimatePropsType) => {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
@@ -10,11 +10,10 @@ const Animate = ({ times, children }: AnimatePropsType) => {
     }, times);
     return () => clearTimeout(timeout);
   }, [times]);
-
   return (
     <div
-      className={`flex flex-col justify-center items-center font-extrabold md:flex-row text-4xl text-center gap-3 mt-5 transition-all duration-2000 ${
-        animate ? "translate-y-10 opacity-0" : "translate-y-0 opacity-100"
+      className={`transition-all duration-2000 ${
+        animate ? "translate-x-[-100px] opacity-0" : "translate-x-0 opacity-100"
       }`}
     >
       {children}
@@ -22,4 +21,4 @@ const Animate = ({ times, children }: AnimatePropsType) => {
   );
 };
 
-export default Animate;
+export default AnimateContato;

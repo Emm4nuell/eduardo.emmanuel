@@ -12,7 +12,7 @@ const NavMenu = () => {
 
   return (
     <div
-      className={`absolute justify-center z-10 h-[90vh] bg-black/60 backdrop-blur-md transition-all duration-[1s] flex sm:hidden
+      className={`absolute justify-center z-10 mt-[10vh] h-[90vh] bg-black/60 backdrop-blur-md transition-all duration-[1s] flex sm:hidden
     ${
       context?.isOpen
         ? "flex w-[90%] translate-x-0"

@@ -2,20 +2,37 @@ import Animate from "@/components/Animate";
 import CardContato from "@/components/CardContato";
 import Input from "@/components/Input";
 import TextArea from "@/components/TextArea";
+import { useEffect, useState } from "react";
 
 const Contato = () => {
+  const [animate, setAnimate] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimate(!animate);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="flex flex-col items-center min-h-[90vh] w-full p-6 bg-gray-900">
-      <Animate times={0}>
-        <h1 className="text-white">Contato</h1>
-        <h1 className="text-orange-500">Eduardo Emmanuel</h1>
-      </Animate>
+      <div className="max-w-170">
+        <Animate times={10}>
+          <h1 className="text-white">Contato</h1>
+          <h1 className="bg-gradient-to-r from-orange-500 via-orange-500 to-orange-400 text-transparent bg-clip-text">
+            Eduardo Emmanuel
+          </h1>
+        </Animate>
 
-      <p className="text-center text-lg text-gray-300 mt-4 mb-22">
-        Fique à vontade para entrar em contato comigo! Seja para tirar dúvidas,
-        trocar ideias ou discutir sobre possíveis colaborações, estou disponível
-        para conversar e ajudar no que for preciso.
-      </p>
+        <Animate times={500}>
+          <p className="text-center text-lg text-gray-300 mt-4 mb-20">
+            Fique à vontade para entrar em contato comigo! Seja para tirar
+            dúvidas, trocar ideias ou discutir sobre possíveis colaborações,
+            estou disponível para conversar e ajudar no que for preciso.
+          </p>
+        </Animate>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl mx-auto">
         <div className="border-2 p-6 border-gray-700 rounded-lg bg-gray-800">

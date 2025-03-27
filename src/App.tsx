@@ -10,7 +10,11 @@ function App() {
     <div className="bg-gray-900">
       <Header />
       <NavMenu />
-      <div className={`"block" ${context?.isOpen && "pointer-events-none"}`}>
+      <div
+        className={`"block min-h-[100vh] border-2 pt-[10vh] border-red-600" ${
+          context?.isOpen && "pointer-events-none"
+        }`}
+      >
         <Outlet />
       </div>
     </div>

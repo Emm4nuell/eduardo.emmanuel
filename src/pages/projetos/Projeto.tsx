@@ -22,18 +22,22 @@ const Projeto = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 p-6 md:p-16 text-white">
-      <Animate>
-        <h1 className="text-4xl font-bold text-center mb-4 text-orange-500">
-          Meus Repositórios do GitHub
-        </h1>
-      </Animate>
+    <div className="min-h-screen bg-gray-900 p-6 text-white">
+      <div className="max-w-170 m-auto">
+        <Animate times={10}>
+          <h1 className="bg-gradient-to-r from-orange-500 via-orange-500 to-orange-400 text-transparent bg-clip-text">
+            Meus Repositórios do GitHub
+          </h1>
+        </Animate>
 
-      <p className="text-center text-lg text-gray-300 mb-22">
-        Aqui você pode visualizar todos os repositórios públicos que desenvolvi
-        ou colaboro no GitHub. Cada card exibe detalhes sobre o repositório,
-        como descrição, linguagem usada e muito mais.
-      </p>
+        <Animate times={500}>
+          <p className="text-center text-lg text-gray-300 mt-2 mb-20">
+            Aqui você pode visualizar todos os repositórios públicos que
+            desenvolvi ou colaboro no GitHub. Cada card exibe detalhes sobre o
+            repositório, como descrição, linguagem usada e muito mais.
+          </p>
+        </Animate>
+      </div>
       {error && <p className="text-red-500 text-center">{error}</p>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {repos.length > 0 ? (

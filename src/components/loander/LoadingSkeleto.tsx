@@ -1,8 +1,8 @@
 import { Skeleton } from "@mui/material";
 
-export default function LoadingPerfil() {
+export function LoadingPerfil() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5">
+    <>
       <Skeleton
         variant="circular"
         width={130}
@@ -19,6 +19,25 @@ export default function LoadingPerfil() {
         variant="rounded"
         width={210}
         height={10}
+        sx={{ backgroundColor: "#bdbdbd" }}
+      />
+    </>
+  );
+}
+
+export function LoadingCardProject() {
+  return (
+    <div className="flex flex-col gap-5 p-5">
+      <Skeleton
+        variant="rounded"
+        width={"50%"}
+        height={10}
+        sx={{ backgroundColor: "#bdbdbd" }}
+      />
+      <Skeleton
+        variant="rounded"
+        width={"100%"}
+        height={200}
         sx={{ backgroundColor: "#bdbdbd" }}
       />
     </div>

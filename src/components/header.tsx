@@ -24,9 +24,15 @@ const Header = () => {
           <Icons />
         </div>
       </div>
-      {/* <div className="absolute z-11 right-15 flex md:hidden justify-center items-center rounded-4xl mt-20 w-10 h-10 bg-orange-500">
-        <FaDownload />
-      </div> */}
+      <div className="absolute z-11 right-6 flex md:hidden justify-center items-center rounded-b-2xl top-[10vh] w-10 h-10 bg-black/60">
+        <a
+          href="../arquivos/Eduardo Emmanuel.pdf"
+          download="Eduardo Emmanuel.pdf"
+          className="text-orange-400"
+        >
+          <FaDownload />
+        </a>
+      </div>
     </div>
   );
 };

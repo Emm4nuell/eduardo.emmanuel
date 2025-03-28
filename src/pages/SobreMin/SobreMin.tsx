@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import LoadingPerfil from "@/components/loander/LoadingSkeleto";
+import { LoadingPerfil } from "@/components/loander/LoadingSkeleto";
 import api from "@/service/api";
 import { useEffect, useState } from "react";
 import {
@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 type AvatarPropsType = {
-  avatar?: string | null;
+  avatar?: string | undefined;
 };
 
 export default function SobreMin() {
@@ -34,24 +34,24 @@ export default function SobreMin() {
   }, []);
   return (
     <div className="flex flex-col items-center gap-8 p-6 md:p-16 text-white w-full min-h-[90vh] bg-gray-900">
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center gap-4">
         {!loading ? (
           <>
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500 mb-4 transition-transform duration-500 hover:scale-110">
-              {fotoPerfil?.avatar ? (
-                <img
-                  src={fotoPerfil.avatar}
-                  alt="Foto de Eduardo Emmanuel"
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <h1>teste de sistema</h1>
-              )}
+            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500 transition-transform duration-500 hover:scale-110">
+              <img
+                src={fotoPerfil?.avatar}
+                alt="Foto de Eduardo Emmanuel"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <h2 className="text-4xl font-bold text-white mb-2">
-              Eduardo Emmanuel
-            </h2>
-            <p className="text-orange-400 text-lg">Desenvolvedor Full Stack</p>
+            <div className="flex flex-col gap-1">
+              <h2 className="text-4xl font-bold text-white">
+                Eduardo Emmanuel
+              </h2>
+              <p className="text-orange-400 text-lg">
+                Desenvolvedor Full Stack
+              </p>
+            </div>
           </>
         ) : (
           <LoadingPerfil />
